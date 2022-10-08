@@ -73,7 +73,7 @@ function boundary(n) {
  Write a function called "strivify" which accepts a string as a parameter.
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
-//TODO check
+
 /* WRITE YOUR ANSWER HERE */
 // = "Strive in front of the given string";
 function strivify(str) {

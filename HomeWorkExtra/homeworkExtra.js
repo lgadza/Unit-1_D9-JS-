@@ -29,7 +29,9 @@
 */
 
 /* WRITE YOUR ANSWER HERE */
-function shoppingCartTotal()
+// function shoppingCartTotal(shoppingCart.) {
+
+// }
 
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
@@ -59,10 +61,9 @@ function shoppingCartTotal()
 
 /* WRITE YOUR ANSWER HERE */
 function loopUntil(x) {
-    for (let i = 0; i <= 9; i++){
-        let randomNum = Math.floor(Math.random() * 9);
-
-    }
+  for (let i = 0; i <= 9; i++) {
+    let randomNum = Math.floor(Math.random() * 9);
+  }
 }
 
 /* EXTRA 7
@@ -76,6 +77,38 @@ function loopUntil(x) {
 */
 
 /* WRITE YOUR ANSWER HERE */
+let string =
+  "Write a function called longest to find the longest string from a given array of strings.";
+console.log(string.split(" "));
+console.log(
+  longest([
+    "Write",
+    "a",
+    "function",
+    "called",
+    "longest",
+    "to",
+    "find",
+    "the",
+    "longest",
+    "string",
+    "from",
+    "a",
+    "given",
+    "array",
+    "of",
+    "strings.",
+  ])
+);
+
+function longest(arr) {
+  let indexOfString = [];
+  for (let i = 0; i < arr.length; i++) {
+    let length = arr[i].length;
+    indexOfString.push(length);
+  }
+  return indexOfString;
+}
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
@@ -99,9 +132,7 @@ function loopUntil(x) {
 */
 
 /* WRITE YOUR ANSWER HERE */
-function matrixGenerator(x, y) {
-    
-}
+function matrixGenerator(x, y) {}
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
