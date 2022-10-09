@@ -6,7 +6,7 @@
 */
 
 /* WRITE YOUR ANSWER HERE */
-//TODO
+//TODO---------1
 // let giveMeRandom = Math.floor(Math.random() * 20);
 
 // const giveMeRandom = [1, 2, 5, 6, 9, 23, 9];
@@ -102,6 +102,8 @@ console.log(latestShoppingCart(shoppingCart));
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
  The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
+
+ TODO-------2
 */
 
 /* WRITE YOUR ANSWER HERE */
@@ -209,6 +211,7 @@ console.log(getTheDate(20));
  Ex.: x = 3, y = 2
  ["00","01","02"
  "10","11","12"]
+ TODO--------3
 */
 
 /* WRITE YOUR ANSWER HERE */
