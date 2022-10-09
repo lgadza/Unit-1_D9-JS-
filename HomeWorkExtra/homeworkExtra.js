@@ -197,6 +197,11 @@ console.log(antiSpamFilter(email));
 */
 
 /* WRITE YOUR ANSWER HERE */
+let currentDate = 25;
+function getTheDate(date) {
+  return currentDate - date;
+}
+console.log(getTheDate(20));
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
