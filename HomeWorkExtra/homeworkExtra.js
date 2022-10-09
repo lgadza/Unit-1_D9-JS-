@@ -8,7 +8,9 @@
 /* WRITE YOUR ANSWER HERE */
 //TODO
 // let giveMeRandom = Math.floor(Math.random() * 20);
+
 // const giveMeRandom = [1, 2, 5, 6, 9, 23, 9];
+
 // const sumOfNums = 0;
 // function checkArray(giveMeRandom) {
 //   for (let i = 0; i < giveMeRandom.length; i++) {
@@ -21,7 +23,7 @@
 //   }
 //   return sumOfNums;
 // }
-// checkArray();
+// console.log(checkArray(giveMeRandom));
 
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
@@ -29,9 +31,25 @@
 */
 
 /* WRITE YOUR ANSWER HERE */
-// function shoppingCartTotal(shoppingCart.) {
+let shoppingCart = [
+  { name: "shoes", id: 1252, quantity: 4, price: 100 },
+  { name: "socks", id: "43RDFUV", quantity: 5, price: 10 },
+  { name: "shorts", id: "WEHFKGI", quantity: 1, price: 20 },
+  { name: "t-shirts", id: "DYY21T", quantity: 2, price: 30 },
+  { name: "underwears", id: "VWIDW", quantity: 2, price: 5 },
+  { name: "belt", id: "FHUWIED", quantity: 1, price: 15 },
+  { name: "coat", id: "cecuyve", quantity: 1, price: 200 },
+];
 
-// }
+function shoppingCartTotal(shoppingCart) {
+  let totalAmount = 0;
+  for (let i = 0; i < shoppingCart.length; i++) {
+    let priceOfItem = shoppingCart[i].price * shoppingCart[i].quantity;
+    totalAmount += priceOfItem;
+  }
+  console.log(totalAmount);
+}
+shoppingCartTotal(shoppingCart);
 
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
@@ -39,6 +57,17 @@
 */
 
 /* WRITE YOUR ANSWER HERE */
+let newObj = {
+  name: "bouts",
+  id: "UYSUGQUWE",
+  quantity: 2,
+  price: 75,
+};
+function addToShoppingCart(obj) {
+  shoppingCart.push(obj);
+  return shoppingCart.length;
+}
+console.log(addToShoppingCart(newObj));
 
 /* EXTRA 4
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
@@ -47,12 +76,28 @@
 
 /* WRITE YOUR ANSWER HERE */
 
+function maxShoppingCart(shoppingCart) {
+  let mostExpensive = shoppingCart[0].price;
+  for (let i = 1; i < shoppingCart.length; i++) {
+    if (shoppingCart[i].price > mostExpensive) {
+      mostExpensive = shoppingCart[i].price;
+    }
+  }
+  return mostExpensive;
+}
+
+console.log(maxShoppingCart(shoppingCart));
+
 /* EXTRA 5
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
 /* WRITE YOUR ANSWER HERE */
+function latestShoppingCart(shoppingCart) {
+  return shoppingCart[shoppingCart.length - 1];
+}
+console.log(latestShoppingCart(shoppingCart));
 
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
@@ -60,17 +105,50 @@
 */
 
 /* WRITE YOUR ANSWER HERE */
-function loopUntil(x) {
-  for (let i = 0; i <= 9; i++) {
-    let randomNum = Math.floor(Math.random() * 9);
-  }
-}
+// function loopUntil(x) {
+
+//   while(x)
+// }
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
 
 /* WRITE YOUR ANSWER HERE */
+let list = [
+  1,
+  2,
+  3,
+  "4",
+  "5",
+  "louis",
+  "lelo",
+  2.8,
+  "4.5",
+  true,
+  null,
+  undefined,
+  false,
+];
+
+function average(arr) {
+  let sum = 0;
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (
+      !isNaN(Number(arr[i])) &&
+      arr[i] !== true &&
+      arr[i] !== false &&
+      arr[i] !== null
+    ) {
+      sum += Number(arr[i]);
+      count++;
+    }
+  }
+  return sum / count;
+}
+console.log(average(list));
+console.log();
 
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
@@ -80,26 +158,6 @@ function loopUntil(x) {
 let string =
   "Write a function called longest to find the longest string from a given array of strings.";
 console.log(string.split(" "));
-console.log(
-  longest([
-    "Write",
-    "a",
-    "function",
-    "called",
-    "longest",
-    "to",
-    "find",
-    "the",
-    "longest",
-    "string",
-    "from",
-    "a",
-    "given",
-    "array",
-    "of",
-    "strings.",
-  ])
-);
 
 function longest(arr) {
   let indexOfString = [];
