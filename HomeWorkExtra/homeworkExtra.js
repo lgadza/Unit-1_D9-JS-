@@ -156,17 +156,24 @@ console.log();
 
 /* WRITE YOUR ANSWER HERE */
 let string =
-  "Write a function called longest to find the longest string from a given array of strings.";
-console.log(string.split(" "));
+  "Write a function called longest to find the longest string from a given array of strings louisgadza nadlelo.";
+let arrayOfStrings = string.split(" ");
 
 function longest(arr) {
-  let indexOfString = [];
+  let longestString = arr[0].length;
   for (let i = 0; i < arr.length; i++) {
-    let length = arr[i].length;
-    indexOfString.push(length);
+    if (arr[i].length > longestString) {
+      longestString = arr[i].length;
+    }
   }
-  return indexOfString;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length === longestString) {
+      return arr[i];
+    }
+  }
 }
+console.log(longest(arrayOfStrings));
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
@@ -174,6 +181,16 @@ function longest(arr) {
 */
 
 /* WRITE YOUR ANSWER HERE */
+let email =
+  "The function should return true if the emailContent string does not contain the words SPAM .";
+function antiSpamFilter(emailContent) {
+  if (!emailContent.includes("SPAM") && !emailContent.includes("SCAM")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(antiSpamFilter(email));
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
